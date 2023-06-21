@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click) = "backtoUsuarios()">
+      <ion-button><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Adicionar Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="container">
+  <ion-item>
+    <ion-label>Id. Usuário</ion-label>
+    <ion-input placeholder="---" disabled="True" [(ngModel)]="idusuario"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Nome</ion-label>
+    <ion-input placeholder="Nome" type="text" [(ngModel)]="nome"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>CPF</ion-label>
+    <ion-input placeholder="CPF" type="text" [(ngModel)]="cpf"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Número da CNH</ion-label>
+    <ion-input placeholder="Num. CNH" type="number"  [(ngModel)]="num_CNH"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Validade</ion-label>
+    <ion-input placeholder="XX/XX/XXXX" type="date" [(ngModel)]="validade_CNH"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Telefone</ion-label>
+    <ion-input placeholder="(XX) XXXXX-XXXX" type="tel" [(ngModel)]="telefone"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>E-mail</ion-label>
+    <ion-input placeholder="nome@email.com" type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <div class="botao">
+      <ion-button size="large" shape="round" (click)="salvar()">Adicionar</ion-button>
+    </div>
+  </ion-item>
+</ion-content>

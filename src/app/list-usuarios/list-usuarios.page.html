@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click) = "backtoUsuarios()">
+      <ion-button><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Listar Usuários</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row>
+  <ion-list class="listagem-us">
+    <ion-item>
+      <ion-buttons (click)="carregar()">
+        <ion-input placeholder="Busca por Nome ou CPF" [(ngModel)]="pesquisa" type="search"></ion-input>
+        <ion-icon name="search"></ion-icon>
+      </ion-buttons>
+    </ion-item>
+    <ion-item>
+      <ion-label>Paginação</ion-label>
+      <ion-button (click)="paginaAnterior()"> Para Cima:</ion-button>
+      <ion-button (click)="paginaPosterior()"> Para Baixo:</ion-button>
+    </ion-item>  
+  </ion-list>
+</ion-row>
+
+<ion-content >
+  <ion-list *ngFor="let item of itens">
+    <ion-item class="lista">
+      <ion-label> {{item.cpf}} - {{item.nome}}</ion-label>
+      <ion-button (click)="editarUsuario(item.idusuario)">
+        <ion-icon name="create-outline"></ion-icon>
+        Editar
+      </ion-button>
+      <ion-button (click)="excluirUsuario(item.idusuario)">
+        <ion-icon name="trash-outline"></ion-icon>
+        Excluir
+      </ion-button>
+     </ion-item>
+  </ion-list>
+</ion-content>

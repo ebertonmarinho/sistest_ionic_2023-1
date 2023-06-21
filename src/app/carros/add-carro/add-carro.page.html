@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click) = "backtoCarros()">
+      <ion-button><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Adicionar Carro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="container">
+  <ion-item>
+    <ion-label>Id. Carro</ion-label>
+    <ion-input placeholder="---" disabled="True" [(ngModel)]="idcarro"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Placa</ion-label>
+    <ion-input placeholder="Placa" type="text" [(ngModel)]="placa"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Marca/Modelo</ion-label>
+    <ion-input placeholder="Marca/Modelo" type="text" [(ngModel)]="marca_modelo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Cor</ion-label>
+    <ion-input placeholder="Cor" type="text"  [(ngModel)]="cor"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Id. Usuário</ion-label>
+    <ion-input placeholder="" type="number" (change)="carregarUsuario()" [(ngModel)]="fk_idusuario"></ion-input>
+    <div class="botao">
+      <ion-button size="small" shape="round" (click)="openModal()">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-item>
+  <ion-item>
+    <ion-label>Proprietário</ion-label>
+    <ion-input placeholder="Proprietário" type="text" [(ngModel)]="proprietario"></ion-input>
+  </ion-item>
+  <ion-item>
+    <div class="botao">
+      <ion-button size="large" shape="round" (click)="salvar()">Adicionar</ion-button>
+    </div>
+  </ion-item>
+</ion-content>

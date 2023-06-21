@@ -1,0 +1,44 @@
+ion-toolbar {
+  background: rgb(212, 232, 243);
+}
+
+ion-content ion-header ion-toolbar ion-title{
+  color: #000000;
+  font-size: 23px;
+  text-align: center;
+}
+
+#container {
+  text-align: center;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-top: 30px;
+}
+
+h1{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ion-img{
+  width: 200px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ion-footer ion-toolbar {
+  --background: rgb(34, 29, 103);
+  --color: white;
+
+  --border-color: #61737e;
+  --border-width: 4px 0;
+  --border-style: double;
+
+  --min-height: 60px;
+  --padding-top: 15px;
+  --padding-bottom: 20px;
+
+  --font-size: 8px;
+}

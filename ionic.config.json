@@ -1,0 +1,7 @@
+{
+  "name": "SistEst",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
